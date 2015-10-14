@@ -7,14 +7,7 @@
 //
 
 #import "ViewController.h"
-#include <sys/sysctl.h>
-#include <sys/resource.h>
-#include <sys/vm.h>
-#include <dlfcn.h>
-#import "MobileGestalt.h"
 #import "AppDelegate.h"
-
-static CFStringRef (*$MGCopyAnswer)(CFStringRef);
 
 @implementation ViewController
 
@@ -38,44 +31,13 @@ static CFStringRef (*$MGCopyAnswer)(CFStringRef);
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view  attribute:NSLayoutAttributeHeight multiplier:1.0 constant:-adH]];
     
-    void *gestalt = dlopen("/usr/lib/libMobileGestalt.dylib", RTLD_GLOBAL | RTLD_LAZY);
-    $MGCopyAnswer = dlsym(gestalt, "MGCopyAnswer");
-    CFStringRef boardID = (CFStringRef)$MGCopyAnswer(CFSTR("HardwarePlatform"));
+
     UILabel* boardIDLabel = [[UILabel alloc] init];
     UILabel* manufactory = [[UILabel alloc] init];
     
-    boardIDLabel.text = (__bridge NSString *)boardID;
-    BOOL isA9 = NO;
-    manufactory.text = @"";
-    if ([(__bridge NSString *)boardID isEqualToString:@"s8000"]) {
-        manufactory.text = @"Samsung";
-        isA9 = YES;
-        imageName = @"A9";
-    }
-    if ([(__bridge NSString *)boardID isEqualToString:@"s8003"]) {
-        manufactory.text = @"TSMC";
-        isA9 = YES;
-        imageName = @"A9";
-    }
-    
-    NSString* str2Cmp = [(__bridge NSString *)boardID lowercaseString];
-    if ([str2Cmp hasPrefix:@"s5l8960"] || [str2Cmp hasPrefix:@"s5l8965"]){
-        imageName = @"A7";
-    }else if ([str2Cmp hasPrefix:@"t7000"]){
-        imageName = @"A8";
-    }else if ([str2Cmp hasPrefix:@"t7001"]){
-        imageName = @"A8X";
-    }else if ([str2Cmp hasPrefix:@"s5l8950"]){
-        imageName = @"A6";
-    }else if ([str2Cmp hasPrefix:@"s5L8955"]){
-        imageName = @"A6X";
-    }else if ([str2Cmp hasPrefix:@"s5l8940"] || [str2Cmp hasPrefix:@"s5l8942"] ){
-        imageName = @"A5";
-    }else if ([str2Cmp hasPrefix:@"s5l8945"]){
-        imageName = @"A5X";
-    }else if ([str2Cmp hasPrefix:@"s5l8930"]){
-        imageName = @"A4";
-    }
+    boardIDLabel.text = @"s8003";
+    manufactory.text = @"TSMC";
+    imageName = @"A9";
     
     [boardIDLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [manufactory setTranslatesAutoresizingMaskIntoConstraints:NO];

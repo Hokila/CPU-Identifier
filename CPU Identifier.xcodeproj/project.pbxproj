@@ -355,9 +355,9 @@
 					"-Obj-C",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
 			};
 			name = Debug;
 		};
@@ -387,9 +387,9 @@
 					"-Obj-C",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
 			};
 			name = Release;
 		};
