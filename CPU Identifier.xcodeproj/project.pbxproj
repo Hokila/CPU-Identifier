@@ -165,7 +165,7 @@
 				TargetAttributes = {
 					4EB000B81BB9502800054208 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Q6F5UHP863;
+						DevelopmentTeam = CJ9ARSV7HF;
 					};
 				};
 			};
@@ -283,6 +283,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "56e92b38-cfb3-4a37-a3b1-0e70d478a0f2";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -305,7 +306,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CHAN YUEN-HSUN (CJ9ARSV7HF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CHAN YUEN-HSUN (CJ9ARSV7HF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -321,6 +323,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "56e92b38-cfb3-4a37-a3b1-0e70d478a0f2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -331,8 +334,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,21 +345,14 @@
 				INFOPLIST_FILE = "CPU test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/CPU",
-					test,
-					"$(PROJECT_DIR)/CPU",
-					test,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-Obj-C",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hokila.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
-				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
+				PROVISIONING_PROFILE = "56e92b38-cfb3-4a37-a3b1-0e70d478a0f2";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,8 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CHAN YUEN-HSUN (CJ9ARSV7HF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CHAN YUEN-HSUN (CJ9ARSV7HF)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,21 +372,14 @@
 				INFOPLIST_FILE = "CPU test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/CPU",
-					test,
-					"$(PROJECT_DIR)/CPU",
-					test,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-Obj-C",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hokila.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
-				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
+				PROVISIONING_PROFILE = "56e92b38-cfb3-4a37-a3b1-0e70d478a0f2";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
