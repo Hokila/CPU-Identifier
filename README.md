@@ -1,5 +1,6 @@
 # always TSMC
 
+
 inspire from https://github.com/hirakujira/CPU-Identifier
 always show TSMC chip at any device,
 even you use iPad2, show TSMC ship
