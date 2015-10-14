@@ -14,14 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    int adH ,upperOffset = 70;
-    if(IS_IPHONE_6P ){
-        adH = 66;
-    }else if(IS_IPHONE_6){
-        adH = 60;
-    }else{
-        adH = 52;
-    }
+    NSInteger upperOffset = 70;
     
     mainScrollView = [[UIScrollView alloc] init];
     [self.view addSubview:mainScrollView];
@@ -29,12 +22,13 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view  attribute:NSLayoutAttributeHeight multiplier:1.0 constant:-adH]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:mainScrollView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view  attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0]];
     
 
     UILabel* boardIDLabel = [[UILabel alloc] init];
     UILabel* manufactory = [[UILabel alloc] init];
     
+    //for samsung users
     boardIDLabel.text = @"s8003";
     manufactory.text = @"TSMC";
     imageName = @"A9";
@@ -78,12 +72,6 @@
     [mainScrollView addConstraint:[NSLayoutConstraint constraintWithItem:webView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0 constant:1300]];
     
     mainScrollView.contentSize = CGSizeMake(self.view.frame.size.width, SCREEN_HEIGHT + 952 -upperOffset*2);
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

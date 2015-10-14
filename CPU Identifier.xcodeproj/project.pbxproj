@@ -28,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E71C3321BB95AD6002B0FF1 /* MobileGestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileGestalt.h; sourceTree = "<group>"; };
 		4E71C3381BB97BA5002B0FF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E71C3691BB98507002B0FF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E8550021BBBFB8D00F8D77E /* A9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A9.png; sourceTree = "<group>"; };
@@ -116,7 +115,6 @@
 				4EB000C21BB9502800054208 /* ViewController.h */,
 				4EB000C31BB9502800054208 /* ViewController.m */,
 				4E71C3371BB97BA5002B0FF1 /* Main.storyboard */,
-				4E71C3321BB95AD6002B0FF1 /* MobileGestalt.h */,
 				4EB000C81BB9502800054208 /* Assets.xcassets */,
 				4EB000CA1BB9502800054208 /* LaunchScreen.storyboard */,
 				4EB000CD1BB9502800054208 /* Info.plist */,
@@ -341,7 +339,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "CPU test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -358,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
 				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -373,7 +372,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "CPU test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.hiraku.cpuidentifier.alwaysTSMC;
 				PRODUCT_NAME = "CPU Identifier";
 				PROVISIONING_PROFILE = "e54369d7-0cf3-4797-b608-9b0dea9a83f0";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
